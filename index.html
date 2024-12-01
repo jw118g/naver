@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="search-area">
+                <!-- 마크업 순서 : 제목 태그가 영역에 먼저나와야 함 -->
+                <h1 class="logo">
+                    <a href="">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg>
+                        <span class="blind">네이버</span>
+                    </a>
+                </h1>
+                <form action="" method="get"> <!-- 주소로 전달되는 get 방식(보안필요x) -->
+                    <fieldset>
+                        <legend class="blind">검색</legend>
+                        <input type="search" class="input-text">
+                        <button class="btn-keyboard">
+                            <span class="blind">가상키보드</span>
+                        </button>
+                        <button class="btn-auto">
+                            <span class="blind">자동완성</span>
+                        </button>
+                        <button class="btn-submit">
+                            <svg id="search-btn" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="fill: #03c75a"> <path d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z"></path> </svg>
+                            <span class="blind">전송</span>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <nav class="nav-area" aria-label="주요 서비스">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon mail"></i>
+                            <span class="name">메일</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon cafe"></i>
+                            <span class="name">카페</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon blog"></i>
+                            <span class="name">블로그</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon shopping"></i>
+                            <span class="name">쇼핑</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon news"></i>
+                            <span class="name">뉴스</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon stock"></i>
+                            <span class="name">증권</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon real"></i>
+                            <span class="name">부동산</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon map"></i>
+                            <span class="name">지도</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon webtoon"></i>
+                            <span class="name">웹툰</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon chzzk"></i>
+                            <span class="name">치지직</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">
+                            <i class="icon more"></i>
+                            <span class="name"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="util-area left">
+                <button class="btn-menu" aria-haspopup="menu" aria-pressed="false">
+                    <span class="blind">확장메뉴</span>
+                </button>
+                <a href="" class="btn-pay">
+                    <span class="blind">네이버페이</span>
+                </a>
+            </div>
+            <div class="util-area right">
+                <button class="btn-talk" aria-haspopup="menu"  aria-pressed="false">
+                    <span class="blind">네이버톡</span>
+                </button>
+                <button class="btn-alert" aria-haspopup="menu" aria-pressed="false">
+                    <span class="blind">알림혜택</span>
+                </button>
+                <a href="" class="btn-cart">
+                    <span class="blind">장바구니</span>
+                </a>
+            </div>
+        </header>
+
+        <main id="container">
+            <div class="main-left">
+                <aside class="frame ad-banner">
+                    <a href="">
+                        <img src="./assets/images/ad1.jpg" alt="초록우산 뇌경색으로 쓰러진 할머니와 눈이 거의 보이지 않는 현우를 도와주세요. 자세히보기">
+                    </a>
+                </aside>
+                <section class="frame sc-news"> 
+                    <h2 class="blind">뉴스</h2> <!-- 접근성 + seo :: 영역의 제목 쓰기 -->
+
+                    <div class="group-head">
+                        <ul class="tab-list" role="tablist">
+                            <!-- role="presentation" :: li 역할을 없애줌 -->
+                            <!-- role="tab" :: 리더기가 탭이라고 인식 -->
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="true">뉴스스탠드</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab dot" role="tab" aria-selected="false">언론사편집</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">엔터</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">스포츠</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">경제</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">쇼핑투데이</a></li>
+                        </ul>
+                    </div>
+                    <div class="group-issue">
+                        <div class="issue-area">
+                            <a href="" role="button" class="btn-all">전체언론사</a>
+                            <div class="swiper issueSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-media">연합뉴스</a>
+                                        <a href="" class="link-issue">속보'김건희 여사 특검법' 본회의 통과…巨野 강행처리</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-media">연합뉴스</a>
+                                        <a href="" class="link-issue">삼성전자, 10조원 자사주 매입한다…"3조원은 3개월 내 소각"</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="" class="link-media">연합뉴스</a>
+                                        <a href="" class="link-issue">'논란의 연세대 자연계 논술' 효력정지…법원 "공정성 훼손"</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="news-area">
+                            <a href="" class="link-news">뉴스스탠드</a>
+                            <a href="" class="link-news link-newshome">뉴스홈</a>
+                        </div>
+                    </div>
+                    <div class="group-media">
+                        <ul class="media-list media-list1"></ul>
+                        <ul class="media-list media-list2"></ul>
+                        <ul class="media-list media-list3"></ul>
+                        <i class="vt-line vt1"></i>
+                        <i class="vt-line vt2"></i>
+                        <i class="vt-line vt3"></i>
+                        <i class="vt-line vt4"></i>
+                        <i class="vt-line vt5"></i>
+                        <i class="hr-line hr1"></i>
+                        <i class="hr-line hr2"></i>
+                        <i class="hr-line hr3"></i>
+                    </div>
+                    <div class="group-control">
+                        <div class="control-area">
+                            <button class="btn prev" aria-label="이전슬라이드"></button>
+
+                            <div class="pagination">
+                                <span class="point">언론사</span> 
+                                더보기
+                                <span class="curr"><span class="curr-num">1</span><span class="blind">페이지</span></span>
+                                <span class="total"><span class="blind">전체</span>/<span class="total-num"></span></span>
+                            </div>
+
+                            <button class="btn next" aria-label="다음슬라이드"></button>
+                        </div>
+                        <div class="view-area" role="radiogroup">
+                            <button class="btn-list" role="radio" aria-checked="true"><span class="blind">리스트형</span></button>
+                            <button class="btn-thumb" role="radio" aria-checked="false"><span class="blind">썸네일형</span></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="frame sc-shopping">
+                    <h2 class="blind">쇼핑</h2>
+                    <div class="group-head">
+                        <ul class="tab-list" role="tablist">
+                            <li class="tab" role="presentation"><a href="" role="tab" class="tab">쇼핑</a></li>
+                            <li class="tab" role="presentation"><a href="" role="tab" class="tab">맨즈</a></li>
+                            <li class="tab" role="presentation"><a href="" role="tab" class="tab">원쁠딜</a></li>
+                            <li class="tab" role="presentation"><a href="" role="tab" class="tab">쇼핑라이브</a></li>
+                        </ul>
+                        <div class="group-control-top">
+                            <div class="pagination">
+                                <span class="curr">1<span class="blind">페이지</span></span>
+                                <span class="total"><span class="blind">전체</span>/13</span>
+                            </div>
+                            <button class="btn prev" aria-label="이전 쇼핑페이지"></button>
+                            <button class="btn next" aria-label="다음 쇼핑페이지"></button>
+
+                        </div>
+                    </div>
+                    <div class="group-shopping-contents">
+                        <div class="shopping-contents-left">
+                            <div class="mall-area">
+                                <div class="mall-list">
+                                    <a href="" class="mall-item">쿠팡</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item bold">G마켓</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item">옥션</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item">SSG닷컴</a>
+                                </div>
+                                <div class="mall-list">
+                                    <a href="" class="mall-item bold">11번가</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item">올리브영</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item">하프클럽</a>
+                                    
+                                </div>
+                                <div class="mall-list">
+                                    <a href="" class="mall-item">GS SHOP</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item">CJ온스타일</a>
+                                    <span class="dot"></span>
+                                    <a href="" class="mall-item bold">패션플러스</a>
+                                </div>
+                            </div>
+                            <div class="quick-link-area">
+                                
+                                <a href="" class="link-item">
+                                    <i class="link-icon shopping-home"></i>
+                                    <span class="link-name">쇼핑홈</span>
+                                </a>
+                                <a href="" class="link-item">
+                                    <i class="link-icon review"></i>
+                                    <span class="link-name">리뷰적립</span>
+                                </a>
+                                <a href="" class="link-item">
+                                    <i class="link-icon order"></i>
+                                    <span class="link-name">주문</span>
+                                </a>
+                                <a href="" class="link-item">
+                                    <i class="link-icon cart"></i>
+                                    <span class="link-name">장바구니</span>
+                                </a>
+                            </div>
+                            <div class="ad-banner-area">
+                                <aside>
+                                    <a href=""><img src="./assets/images/ad3.jpg" alt></a>
+                                    <a  href="" class="ad-text">화제의 연예인 턱살 관리템!</a>
+                                </aside>
+                            </div>
+                            
+                        </div>
+                        <div class="shopping-contents-right">
+                            <ul class="product-list">
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product01.jpg" alt="상품 사진"></span>
+                                        <span>쌩얼이 예뻐져요
+                                            지금 인기폭주!</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product02.jpg" alt="상품 사진"></span>
+                                        <span>쌩얼이 예뻐져요
+                                            지금 인기폭주!</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product03.jpg" alt="상품 사진"></span>
+                                        <span>하반기결산SALE
+                                            BEST 가구 특가</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product04.jpg" alt="상품 사진"></span>
+                                        <span>하반기결산SALE
+                                            BEST 가구 특가</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product05.jpg" alt="상품 사진"></span>
+                                        <span>원단이 좋은옷~
+                                            브랜드 퀄리티</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product06.jpg" alt="상품 사진"></span>
+                                        <span>쌩얼이 예뻐져요
+                                            지금 인기폭주!</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product07.jpg" alt="상품 사진"></span>
+                                        <span>원단이 좋은옷~
+                                            브랜드 퀄리티</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product08.jpg" alt="상품 사진"></span>
+                                        <span>후끈한 발찜질팩
+                                            신상 35%+증정
+                                            </span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product09.jpg" alt="상품 사진"></span>
+                                        <span>쌩얼이 예뻐져요
+                                            지금 인기폭주!</span>
+                                    </a>
+                                </li>
+                                <li class="product-item">
+                                    <a href="">
+                                        <span class="img-bg"><img src="./assets/images/product10.jpg" alt="상품 사진"></span>
+                                        <span>후끈한 발찜질팩
+                                            신상 35%+증정
+                                            </span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="group-today-pick">
+                        <span class="today-pick" role="presentation">오늘의 혜택</span>
+                        <a href="" class="link-today-pick">
+                            <img src="./assets/images/mall.png" alt="11번가">
+                            <span>
+                                매일<span class="point"> 20% 선착순 쿠폰 </span>받고 힙한 상품 픽하자! 11번가 뉴픽!
+                            </span>
+                        </a>
+                    </div>  
+                    <div class="group-control">
+                        <div class="control-area">
+                            <button class="btn prev" aria-label="이전슬라이드"></button>
+
+                            <div class="pagination">
+                                <span class="point">쇼핑아이템</span> 
+                                더보기
+                                <span class="curr">1<span class="blind">페이지</span></span>
+                                <span class="total"><span class="blind">전체</span>/13</span>
+                            </div>
+
+                            <button class="btn next" aria-label="다음슬라이드"></button>
+                        </div>
+                        <div class="ad-tag-area">
+                            <span>AD</span>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="frame sc-interest">
+                    <h2 class="blind">관심사</h2>
+                    <div class="group-head">
+                        <ul class="tab-list" role="tablist">
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="true">추천・구독
+                            </a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab dot" role="tab" aria-selected="false">자동차</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">웹툰</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">패션뷰티</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">푸드</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">리빙</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">책방</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">지식+</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">건강</a></li>
+                            <li class="tab-item" role="presentation"><a href="" class="tab" role="tab" aria-selected="false">게임</a></li>
+                        </ul>
+                    </div>
+                    <div class="group-category-tab">
+                        <ul class="tab-list" role="tablist">
+                            <li class="tab-item" role="presentation"><a href="" id="tab1" class="tab" role="tab" aria-selected="true">인기</a></li>
+                            <li class="tab-item" role="presentation"><a href="" id="tab2" class="tab" role="tab">동물</a></li>
+                            <li class="tab-item" role="presentation"><a href="" id="tab3" class="tab" role="tab">여행</a></li>
+                            <li class="tab-item" role="presentation"><a href="" id="tab4" class="tab" role="tab">연애결혼</a></li>
+                            <li class="tab-item" role="presentation"><a href="" id="tab5" class="tab" role="tab">영화</a></li>
+                            <li class="tab-item" role="presentation"><a href="" id="tab6" class="tab" role="tab">육아</a></li>
+                        </ul>
+                        <div><a href="" class="home">구독홈</a></div>
+                    </div>
+                    
+                    <div data-tab="tab1" role="tabpanel">
+                        <div class="group-interest-contents" data-index='1'>
+                            <ul class="inetrest-list">
+                        
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="group-feed">
+                            <strong>매일 찾는 짧은 즐거움</strong>
+                            <div class="swiper feedSwiper">
+                                <div class="feed-list swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed01.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed02.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed03.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed04.png" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed05.png" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed06.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed07.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed08.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed09.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed10.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                        
+                        
+                                </div>
+                        
+                            </div>
+                            <button class="btn prev" aria-label="이전슬라이드"></button>
+                            <button class="btn next" aria-label="다음슬라이드"></button>
+                            <!-- <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div> -->
+                        
+                        </div>
+                        <div class="group-interest-contents" data-index="2">
+                            <ul class="inetrest-list">
+                        
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest01.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">랜선 집들이 9평 원룸 연보라색 인테리어 주방 상부장 대신 코너형 선반</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group-more-view">
+                            <button class="btn">펼쳐보기<i class="icon plus"></i></button>
+                        </div>
+                    </div>
+                    <div data-tab="tab2" role="tabpanel">
+                        <div class="group-interest-contents" data-index='1'>
+                            <ul class="inetrest-list">
+                        
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest02.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">한국인이 선호하는 강아지는? Top10</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile02.png" alt="아이디어 래빗">
+                                            <span class="writer">아이디어 래빗</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        
+                        <div class="group-feed">
+                            <strong>매일 찾는 짧은 즐거움</strong>
+                            <div class="swiper feedSwiper">
+                                <div class="feed-list swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed01.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed02.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed03.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed04.png" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed05.png" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed06.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed07.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed08.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed09.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <a href="" class="feed-item">
+                                            <div class="image-bg"><img src="./assets/images/feed10.jpg" alt></div>
+                                            <p>윤도현 X 김도영, ’드림 테이블세터 출격 대기’ [O! SPORTS 숏폼]</p>
+                                            <div class="writer"><span class="writer">OSEN</span></div>
+                                        </a>
+                                    </div>
+                        
+                        
+                                </div>
+                        
+                            </div>
+                            <button class="btn prev" aria-label="이전슬라이드"></button>
+                            <button class="btn next" aria-label="다음슬라이드"></button>
+                            <!-- <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div> -->
+                        
+                        </div>
+                        <div class="group-interest-contents" data-index="2">
+                            <ul class="inetrest-list">
+                        
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="interest-item">
+                                    <a href="">
+                                        <div class="image-bg"><img src="./assets/images/interest03.jpg" alt="컨텐츠 이미지"></div>
+                                        <p class="text">강아지가 땅을 파는 이유 행동의미 스트레스 증상일까?</p>
+                                        <div class="profile">
+                                            <img src="./assets/images/profile01.png" alt="쑤">
+                                            <span class="writer">쑤</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="group-more-view">
+                            <button class="btn">펼쳐보기<i class="icon plus"></i></button>
+                        </div>
+                    </div>
+                    
+                </section>
+
+            </div>
+            <!-- span : 인라인요소 꾸미는 태그
+            p : 문장,단락,절 -->
+            <div class="main-right">
+                <section class="frame sc-login" aria-label="로그인 정보">
+                    <h2 class="blind">로그인</h2>
+                    <p class="login-msg">네이버를 더 안전하고 편리하게 이용하세요</p>
+
+                    <a href="" class="link-login"><span class="blind">NAVER</span>로그인</a>
+                    <div class="login-more">
+                        <a href="">아이디 찾기</a>
+                        <a href="">비밀번호 찾기</a>
+                        <a href="">회원가입</a>
+                    </div>
+                </section>
+                <aside class="frame ad-banner">
+                    <a href="">
+                        <img src="./assets/images/ad2.png" alt="광고이미지">
+                    </a>
+                </aside>
+                <aside class="frame ad-banner">
+                    <a href="">
+                        <img src="./assets/images/add4.png" alt="광고이미지">
+                    </a>
+                </aside>
+                <section class="frame sc-shopping-view">
+                    <div class="group-title">
+                        <span>주목할</span>
+                        <span>만한</span>
+                        <span>상품은?</span>
+                        <a href="">AD</a>
+                    </div>
+                    <div class="group-product">
+                        <div class="product-list-area">
+                            <div class="swiper adSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <a href="">
+                                                <span class="image-bg"><img src="./assets/images/side-add1.jpg" alt="제품이미지"></span>
+                                                <span class="title">밸리스 고양이 치석제거 스틱 20개입</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <a href="">
+                                                <span class="image-bg"><img src="./assets/images/side-add1.jpg" alt="제품이미지"></span>
+                                                <span class="title">밸리스 고양이 치석제거 스틱 20개입</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <a href="">
+                                                <span class="image-bg"><img src="./assets/images/side-add1.jpg" alt="제품이미지"></span>
+                                                <span class="title">밸리스 고양이 치석제거 스틱 20개입</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <a href="">
+                                                <span class="image-bg"><img src="./assets/images/side-add1.jpg" alt="제품이미지"></span>
+                                                <span class="title">밸리스 고양이 치석제거 스틱 20개입</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <button class="btn prev" aria-label="이전슬라이드"></button>
+                            <button class="btn next" aria-label="다음슬라이드"></button>
+                        </div>
+                    </div>
+                </section>
+                <section class="frame sc-weather">
+                    <div class="title-group">
+                        <span class="title-left">
+                            <a href="">날씨</a>
+                            <a href="">예보 비교</a>
+                        </span>
+                        <span class="title-right">인천시 임학동</span>
+                    </div>
+                    <div class="weather-info-group">
+                        <div class="current">
+                            <div class="weather-box">
+                                <a href="" class="weather-icon"></a>
+                                <span class="weather-text">
+                                    <span>22.1°</span>
+                                    <span>흐림</span>
+                                </span>
+                            </div>
+                            <div class="tem-box">
+                                <span><span><span class="blind">최저기온</span>19</span>°</span>
+                                <span><span><span class="blind">최고기온</span>27</span>°</span>
+                            </div>
+                            <div class="air-box">
+                                <span>미세 <span class="condition">좋음</span></span>
+                                <span>초미세 <span class="condition">좋음</span></span>
+                            </div>
+                        </div>
+                        <div class="graph">
+                            <ul class="weather-list">
+                                <li class="weather-item">
+                                    <div class="temperature-box" style="margin-top: 20px;">22°</div>
+                                    <div class="time-box">
+                                        <div class="icon"><span class="blind">흐림</span></div>
+                                        <div class="time">22시</div>
+                                    </div>
+                                </li>
+                                <li class="weather-item">
+                                    <div class="temperature-box" style="margin-top: 20px;">22°</div>
+                                    <div class="time-box">
+                                        <div class="icon"><span class="blind">흐림</span></div>
+                                        <div class="time">22</div>
+                                    </div>
+                                </li>
+                                <li class="weather-item">
+                                    <div class="temperature-box">22°</div>
+                                    <div class="time-box">
+                                        <div class="icon"><span class="blind">흐림</span></div>
+                                        <div class="time">22</div>
+                                    </div>
+                                </li>
+                                <li class="weather-item">
+                                    <div class="temperature-box">22°</div>
+                                    <div class="time-box">
+                                        <div class="icon"><span class="blind">흐림</span></div>
+                                        <div class="time">22</div>
+                                    </div>
+                                </li>
+                                <li class="weather-item">
+                                    <div class="temperature-box" style="margin-top: 20px;">22°</div>
+                                    <div class="time-box">
+                                        <div class="icon"><span class="blind">흐림</span></div>
+                                        <div class="time">22</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="frame sc-daily-board">
+                    <div class="title-group">
+                        <span class="title-left">
+                            <a href="">증시</a>
+                            <button></button>
+                        </span>
+                        <span class="title-right">09.26. 01:40 <button class="btn refresh"><span class="blind">새로고침</span></button></span>
+                    </div>
+                    <div class="info-group">
+                        <div class="graph-area">
+                            <div class="title">
+                                <span>나스닥</span>
+                                <span>18,102.58</span>
+                                <span><i class="icon"></i>28.06+0.16%</span>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="./assets/images/chart.png" alt="차트">
+                            </div>
+                        </div>
+                        <div class="stock-list-area">
+                            <ul class="stock-list">
+                                <li class="stock-item">
+                                    <a href="">
+                                        <span>삼성전자</span>
+                                        <span>
+                                            <i class="icon decline">
+                                                <span class="blind">하락</span>
+                                            </i>
+                                            <span class="percent">1.58%</span>
+                                            <span>62,200</span>
+                                        </span>
+
+                                    </a>
+                                </li>
+                                <li class="stock-item">
+                                    <a href="">
+                                        <span>삼성전자</span>
+                                        <span>
+                                            <i class="icon decline">
+                                                <span class="blind">하락</span>
+                                            </i>
+                                            <span class="percent">1.58%</span>
+                                            <span>62,200</span>
+                                        </span>
+
+                                    </a>
+                                </li>
+                                <li class="stock-item">
+                                    <a href="">
+                                        <span>삼성전자</span>
+                                        <span>
+                                            <i class="icon decline">
+                                                <span class="blind">하락</span>
+                                            </i>
+                                            <span class="percent">1.58%</span>
+                                            <span>62,200</span>
+                                        </span>
+
+                                    </a>
+                                </li>
+                                <li class="stock-item">
+                                    <a href="">
+                                        <span>인기종목 더보기</span>
+                                        <span>
+                                            <i class="icon more"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="frame sc-ad">
+                    <a href="">
+                        <div class="title-group">
+                            5살 한글 떼기 비결은?
+                        </div>
+                        <div class="content-group">
+                            <div class="img-area">
+                                <img src="./assets/images/brand.jpg" alt="광고이미지">
+                            </div>
+                            <div class="text-area">
+                                <p>이것만 했는데 아이 스스로 한글을 읽고 써요!</p>
+                            </div>
+                        </div>
+                        <div class="ad-more-group">
+                            <span><img src="./assets/images/brand-thumb.jpg" alt class="brand">천재교과서 밀크T아이</span>
+                            <span class="more"><span>더 알아보기</span> <svg class="rb_brand_arrow" width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">          <path opacity="0.5" d="M0.75 1.25L4.75 5.75L0.75 10.25" stroke="currentColor" stroke-linecap="round"></path>        </svg></span>
+                        </div>
+                    </a>
+                </section>
+                <section class="frame sc-widget">
+
+                        <div class="title-group">
+                            위젯 보드
+                        </div>
+                        <div class="calendar-group">
+                            <h3>캘린더</h3>
+                            <div class="inner">
+                                <div class="today-area">
+                                    <span><span class="today">11.15</span> <span class="day">금</span>
+                                    </span>
+                                </div>
+                                <div class="calendar-area">
+                                    <table>
+                                        <thead>
+                                            <th>일</th>
+                                            <th>월</th>
+                                            <th>화</th>
+                                            <th>수</th>
+                                            <th>목</th>
+                                            <th>금</th>
+                                            <th>토</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>6</td>
+                                                <td>7</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>10</td>
+                                                <td>11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>13</td>
+                                                <td>14</td>
+                                                <td>15</td>
+                                                <td class="today-mark">16</td>
+                                                <td>17</td>
+                                                <td>18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td>20</td>
+                                                <td>21</td>
+                                                <td>22</td>
+                                                <td>23</td>
+                                                <td>24</td>
+                                                <td>25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>26</td>
+                                                <td>27</td>
+                                                <td>28</td>
+                                                <td>29</td>
+                                                <td>30</td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="vibe-group">
+                            <div class="title">
+                                <h3><div class="logo"><span class="blind">VIBE</span></div><span> 마음튼튼음악🎵</span></h3>
+                                <button class="btn-refresh"><span>다른 추천 보기</span></button>
+                            </div>
+                            
+                            <div class="inner">
+                                <ul class="vibe-list">
+                                    <li class="vibe-item">
+                                        <a href="">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/vibe01.png" alt>
+                                                <button class="play-btn"></button>
+                                                <span>가을밤의 감성</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li class="vibe-item">
+                                        <a href="">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/vibe03.png" alt>
+                                                <button class="play-btn"></button>
+                                                <span>기분좋은 아침</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li class="vibe-item">
+                                        <a href="">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/vibe02.png" alt>
+                                                <button class="play-btn"></button>
+                                                <span>마음의 휴식</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                                <ul class="vibe-list">
+                                    <li class="vibe-item">
+                                        <a href="">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/vibe0.jpg" alt>
+                                                <button class="play-btn"></button>
+                                                <span>가을밤의 감성</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li class="vibe-item">
+                                        <a href="">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/vibe05.jpg" alt>
+                                                <button class="play-btn"></button>
+                                                <span>기분좋은 아침</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li class="vibe-item">
+                                        <a href="">
+                                            <div class="img-wrap">
+                                                <img src="./assets/images/vibe06.jpg" alt>
+                                                <button class="play-btn"></button>
+                                                <span>마음의 휴식</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="mobile-group">
+                            <div class="left">
+                                <i class="logo"></i>
+                                <a href=""><strong>모바일 네이버 메인</strong> 열기</a>
+                            </div>
+                            <a href=""><i class="link"></i></a>
+                        </div>
+                        
+
+                </section>
+                <div class="bottom-banner-box">
+                    <div class="swiper bannerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="inner">
+                                    <img src="assets/images/banner01.png" alt>
+                                    <p>
+                                        <span>네이버플러스 스토어 오픈</span>
+                                        <span>깎고+받고+쌓는 셈이 다른 쇼핑</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="inner">
+                                    <img src="assets/images/banner02.png" alt>
+                                    <p>
+                                        <span>강세일 블랙프라이데이</span>
+                                        <span>매일 선착순 할인 쿠폰!</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+        <footer id="footer" role="contentinfo">
+            <div class="group-footer-inner">
+                <div class="banner-area">
+                    <a href="" class="banner-box">
+                        <div class="image-box">
+                            <img src="./assets/images/footer-banner01.jpg" alt="광고이미지">
+                            <i class="tag">AD</i>
+                        </div>
+                        <div class="content-box">
+                            <strong class="sub-title">밀알복지재단</strong>
+                            <strong class="title">긴급의료비 지원</strong>
+                            <p>희귀병으로 광대뼈가 없이<br>태어난 하랑이를 지켜주세요</p>
+                        </div>
+                    </a>
+                    <a href="" class="banner-box">
+                        <div class="image-box">
+                            <img src="./assets/images/footer-banner03.jpg" alt="광고이미지">
+                            <i class="tag">AD</i>
+                        </div>
+                        <div class="content-box">
+                            <strong class="sub-title">네이버</strong>
+                            <strong class="title">히든 아카이브</strong>
+                            <p>귀여운 개 세상을 구한다<br>나만 없는 멍냥이 보러 가기</p>
+                        </div>
+                    </a>
+                    <a href="" class="banner-box">
+                        <div class="image-box">
+                            <img src="./assets/images/footer-banner02.jpg" alt="광고이미지">
+                            <i class="tag">AD</i>
+                        </div>
+                        <div class="content-box">
+                            <strong class="sub-title">영화 위키드</strong>
+                            <strong class="title">아리아나 그란데의 뮤지컬 영화</strong>
+                            <p>압도적 뮤지컬 블록버스터<br>11월 20일 전세계 최초개봉</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="notice-area">
+                    <span>
+                        <a href="" class="notice"><h3>공지사항</h3></a>
+                        <a href="">쇼핑투데이 내 '오늘의 팝업'판이 출시됩니다!</a>
+                    </span>
+                    <a href="">서비스 전체보기</a>
+                </div>
+                <div class="partners-area">
+                    <div class="partners-wrap">
+                        <div class="partners">
+                            <h3>Partners</h3>
+                            <ul class="partners-list">
+                                <li class="partners-item"><a href="">프로젝트 꽃</a></li>
+                                <li class="partners-item"><a href="">네이버 비즈니스</a></li>
+                                <li class="partners-item"><a href="">네이버 비즈니스 스쿨</a></li>
+                                <li class="partners-item"><a href="">네이버 광고</a></li>
+                                <li class="partners-item"><a href="">스토어 개설</a></li>
+                                <li class="partners-item"><a href="">지역업체 등록</a></li>
+                                <li class="partners-item"><a href="">엑스퍼트 등록</a></li>
+                            </ul>
+                        </div>
+                        <div class="partners">
+                            <h3>Dvelopers</h3>
+                            <ul class="partners-list">
+                                <li class="partners-item"><a href="">네이버 개발자 센터</a></li>
+                                <li class="partners-item"><a href="">오픈 API</a></li>
+                                <li class="partners-item"><a href="">오픈소스</a></li>
+                                <li class="partners-item"><a href="">네이버 D2</a></li>
+                                <li class="partners-item"><a href="">네이버 D2SF</a></li>
+                                <li class="partners-item"><a href="">네이버 랩스</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-box-wrap">
+
+                        <div class="service-box">
+                            <a href="" class="logo-img">
+                                <img src="./assets/images/service-logo.png" alt="웨일브라우저">
+                            </a>
+                            <div class="title">
+                                <strong>웨일 브라우저</strong>
+                                <a href="">이용안내</a>
+                            </div>
+                            
+                        </div>
+                        <div class="service-box">
+                            <a href="" class="logo-img">
+                                <img src="./assets/images/service-logo2.png" alt="기업 사이트">
+                            </a>
+                            <div class="title">
+                                <strong>기업 사이트</strong>
+                                <a href="">바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="corp-area">
+                    <ul class="corp-list">
+                        <li class="corp-item"><a href="">회사소개</a></li>
+                        <li class="corp-item"><a href="">인재채용</a></li>
+                        <li class="corp-item"><a href="">제휴제안</a></li>
+                        <li class="corp-item"><a href="">이용약관</a></li>
+                        <li class="corp-item"><a href=""><strong>개인정보처리방침</strong></a></li>
+                        <li class="corp-item"><a href="">청소년보호정책</a></li>
+                        <li class="corp-item"><a href="">네이버 정책</a></li>
+                        <li class="corp-item"><a href="">고객센터</a></li>
+                        <li class="corp-item"><a href=""><strong>ⓒ NAVER Corp.</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
