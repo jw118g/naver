@@ -1,6 +1,32 @@
 $('a').click(function(e){
     e.preventDefault()
 })
+
+/* 접근성 글자크기 선택 */
+const settingBtn = document.querySelector('.btn-setting')
+const settingTools = document.querySelector('.setting-tools')
+const zoomOutBtn = document.querySelector('.setting-tools button.zoom-out')
+const zoomBasicBtn = document.querySelector('.setting-tools button.zoom-basic')
+const zoomInBtn = document.querySelector('.setting-tools button.zoom-in')
+
+settingBtn.addEventListener('click',function(){
+    this.classList.toggle('active')
+    settingTools.classList.toggle('active')
+})
+// 축소, 기본, 확대 버튼 클릭 이벤트
+zoomOutBtn.addEventListener('click',function(){
+    document.documentElement.classList.add('zoom-out')
+})
+zoomBasicBtn.addEventListener('click',function(){
+    document.documentElement.classList.remove('zoom-in')
+    document.documentElement.classList.remove('zoom-out')
+})
+zoomInBtn.addEventListener('click',function(){
+    document.documentElement.classList.add('zoom-in')
+})
+
+
+
 // 뉴스이미지 랜덤 배치하기
 function addRandomImages(containerSelector) {
     let newsEl = ``;
@@ -30,7 +56,6 @@ function addRandomImages(containerSelector) {
     // 지정된 컨테이너에 HTML 삽입
     $(containerSelector).html(newsEl);
 }
-
 
 addRandomImages('.sc-news .media-list1');
 addRandomImages('.sc-news .media-list2');

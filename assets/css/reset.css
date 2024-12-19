@@ -83,6 +83,13 @@ html{
     width: 100%;
     margin: 0; padding: 0;
 }
+html.zoom-out {
+    font-size: 10px;
+}
+html.zoom-in {
+    font-size: 12px;
+}
+
 body {
     color: #101010;
     color: var(--color_body);

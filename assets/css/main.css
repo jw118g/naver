@@ -2,6 +2,110 @@ body{
     font-size: 1.4rem;
     line-height: 1.7rem;
 }
+.btn-setting {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, .3);
+    background-color: var(--color_button1_bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 24px;
+    right: 36px;
+}
+.btn-setting.active:hover {
+    background-color: #17b75e;
+}
+.btn-setting.active {
+    background-color: #03c75a;
+}
+.btn-setting:hover {
+    background-color: #f7f7f8;
+}
+.btn-setting::after {
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.b27083b1.png);
+    background-size: 463px 440px;
+    background-position: -431px -388px;
+    width: 16px;
+    height: 16px;
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+.btn-setting.active::after {
+    background-position: -431px -320px;
+}
+
+.setting-tools {
+    width: 320px;
+    height: 207px;
+    padding: 20px;
+    position: fixed;
+    z-index: 800;
+    right: 24px;
+    bottom: 80px;
+    background-color: var(--color_setting_bg);
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8, 0px 4px 8px 0 rgba(0, 0, 0, .3);
+    display: none;
+}
+.setting-tools.active {
+    display: block;
+}
+.setting-tools .title {
+    font-size: 1.5rem;
+    line-height: 20px;
+    font-weight: 800;
+}
+.setting-tools ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+.setting-tools ul li {
+    flex: 1;
+}
+.setting-tools ul li button > div {
+    display: block;
+    height: 85px;
+    width: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #ebebeb, 0 2px 4px 0 rgba(0, 0, 0, .02);
+}
+.setting-tools ul li button.zoom-out > div  {
+    font-size: 13px;
+}
+.setting-tools ul li button.zoom-basic > div  {
+    font-size: 15px;
+}
+.setting-tools ul li button.zoom-in > div  {
+    font-size: 18px;
+}
+.setting-tools ul li button:hover > div {
+    background-color: #f8f8f8;
+} 
+.setting-tools ul li button > div + span {
+    margin-top: 12px;
+    display: block;
+    font-size: 13px;
+}
+.setting-tools ul li button > div span:first-child::after{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: #d3d5d7;
+    vertical-align: 4px;
+}
+
 
 #container{
     width: 1280px;
