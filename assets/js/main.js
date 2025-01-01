@@ -15,6 +15,7 @@ settingBtn.addEventListener('click',function(){
 })
 // 축소, 기본, 확대 버튼 클릭 이벤트
 zoomOutBtn.addEventListener('click',function(){
+    document.documentElement.classList.remove('zoom-in')
     document.documentElement.classList.add('zoom-out')
 })
 zoomBasicBtn.addEventListener('click',function(){
@@ -22,6 +23,7 @@ zoomBasicBtn.addEventListener('click',function(){
     document.documentElement.classList.remove('zoom-out')
 })
 zoomInBtn.addEventListener('click',function(){
+    document.documentElement.classList.remove('zoom-out')
     document.documentElement.classList.add('zoom-in')
 })
 
